@@ -6,7 +6,7 @@
 *Inside the folder titled `Question 1` you will find two SQL files. The file titled `create_db_and_data` contains the queries for creating the table and adding test data into them. These queries should be ran first. The second file titled `query` contains the actual queries to organize the data. These queries should be ran after the database has been created and populated with test data.*
 
 ### THOUGHTS
-This was an interesting question, with many different potential approaches to take. I ultimately decided to use SQL, and came to a solution using PostGres and a little bit of Python. After creating the database and tables, the first real challenge was generating enough test data to simulate a real world scenario as outlined in the problem. With every game loser putting in only $10 it would take a little while until the ultimate goal of $800 was reached. 
+This was an interesting question, with many different potential approaches to take. I ultimately decided to use SQL, and came to a solution using PostGreSQL and a little bit of Python. After creating the database and tables, the first real challenge was generating enough test data to simulate a real world scenario as outlined in the problem. With every game loser putting in only $10 it would take a little while until the ultimate goal of $800 was reached. 
 
 Pythons random module was a huge help here and with the following code I was able to quickly and easily generate 100 unique employee IDs, then pick from that pool of employee IDs to generate 200 random selections with duplicates to use as potential players in the game nights, and 200 random selections of either `TRUE` or `FALSE` for whether or not they were winners:   
 
@@ -40,7 +40,7 @@ Adding $10 for every game loser and removing $800 from the prize pot to reset it
 
 ## QUESTION 2
 ### THOUGHTS
-This was a fairly straightforward question. I've included everything that I believe should be in a test plan, ie) a brief introduction, test scope, assumptions/risks, testing approach, testing environments and of course, deliverables. Some of these fields may be blank, as the question only provided the features to be tested and stressed that stability be a focal point of testing, but I've left the fields in to give the most accurate representation of what I believe should be in a test plan. 
+This was a fairly straightforward question. I've included everything that I believe should be in a test plan, i.e) a brief introduction, test scope, assumptions/risks, testing approach, testing environments and of course, deliverables. Some of these fields may be blank, as the question only provided the features to be tested and stressed that stability be a focal point of testing, but I've left the fields in to give the most accurate representation of what I believe should be in a test plan. 
 
 ## QUESTION 3
 ### THOUGHTS
@@ -61,7 +61,7 @@ These test cases were written with the assumption that all requirements have bee
 12. Verify that able to switch between lowest price and best seats 
 #### ORDER PAGE
 13. Verify that event text is being displayed properly at top of order page
-14. Verify that order countdown is working working as expected
+14. Verify that order countdown is working as expected
 15. Verify that "Learn More" button is working as expected
 16. Verify that parking information is displayed properly, with correct locations
 17. Verify that one or multiple parking passes are able to be added as expected
