@@ -40,7 +40,7 @@ Adding $10 for every game loser and removing $800 from the prize pot to reset it
 
 ## QUESTION 2
 ### THOUGHTS
-This was a fairly straightforward question. I've included everything that I believe should be in a test plan, i.e) a brief introduction, test scope, assumptions/risks, testing approach, testing environments and of course, deliverables. Some of these fields may be blank, as the question only provided the features to be tested and stressed that stability be a focal point of testing, but I've left the fields in to give the most accurate representation of what I believe should be in a test plan. 
+This was a fairly straightforward question. I've included everything that I believe should be in a test plan, i.e) a brief introduction, test scope, assumptions/risks, testing approach, testing environments and of course, deliverables. Some of these fields may be blank or include assumptions, as the question only provided the features to be tested and stressed that stability be a focal point of testing, but I've left the fields in to give the most accurate representation of what I believe should be in a test plan. 
 
 ## QUESTION 3
 ### THOUGHTS
