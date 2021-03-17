@@ -5,6 +5,7 @@
 ### INSTRUCTIONS
 *Inside the folder titled `Question 1` you will find two SQL files. The file titled `create_db_and_data` contains the queries for creating the table and adding test data into them. These queries should be ran first. The second file titled `query` contains the actual queries to organize the data. These queries should be ran after the database has been created and populated with test data.*
 
+### THOUGHTS
 This was an interesting question, with many different potential approaches to take. I ultimately decided to use SQL, and came to a solution using PostGres and a little bit of Python. After creating the database and tables, the first real challenge was generating enough test data to simulate a real world scenario as outlined in the problem. With every game loser putting in only $10 it would take a little while until the ultimate goal of $800 was reached. 
 
 Pythons random module was a huge help here and with the following code I was able to quickly and easily generate 100 unique employee IDs, then pick from that pool of employee IDs to generate 200 random selections with duplicates to use as potential players in the game nights, and 200 random selections of either `TRUE` or `FALSE` for whether or not they were winners:   
@@ -35,4 +36,11 @@ The code above does result in certain employee IDs being potentially repeated mu
 The second challenge was organizing the data in a way that would return the results I needed. 
 One key point to track were which employees had lost per game. This would give me the total amount contributed towards the prize pot for that game. Adding these into its own column using an `OVER` clause would give me a running tally of the current prize pot, and a boolean column called `party_next` could keep track of whether or not the pot was greater than or equal to $800. If it was, then it would return `TRUE`, meaning the next even would be a party and not a game. Otherwise it would return `FALSE`. This effectively estimates when the pot will be full. 
 
-Adding $10 for every game loser and removing $800 from the prize pot to reset it are both handled by multiple `CASE` statements. If the boolean column that tracks whether or not an employee is a winner for that game returns `FALSE` then 
+Adding $10 for every game loser and removing $800 from the prize pot to reset it are both handled by multiple `CASE` statements. If activity type is game and the boolean column that tracks whether or not an employee is a winner for that game returns `FALSE` then a 1 is returned and counted by a `COUNT` function then multiplied by 10 to stand for the $10 put in by game loser. Otherwise the activity type is party and 800 is subtracted. These are all then organized using a `GROUP BY` statement, giving us everything we need to keep track of game activities, results, players, and pot money. 
+
+## QUESTION 2
+### THOUGHTS
+This was a fairly straightforward question. I've included everything that I believe should be in a test plan, ie) a brief introduction, test scope, assumptions/risks, testing approach, testing environments and of course, deliverables. Some of these fields may be blank, as the question only provided the features and stressed that stability be a focal point of testing, but I've left the fields in to give the most accurate representation of what I believe should be in a test plan. 
+
+## QUESTION 3
+### THOUGHTS
